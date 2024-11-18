@@ -9,6 +9,13 @@ app.get('/hello', (req, res) => {
     });
 });
 
+app.get('/echo/:id', (req, res) => {
+    const id = req.params.id;
+    res.json({
+        id: id
+    });
+});
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`)
-})
+});
